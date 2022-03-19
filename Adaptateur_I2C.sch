@@ -1,0 +1,668 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Adaptateur I2C to NIXIE"
+Date "2021-09-06"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_Expansion:MCP23017_SP U1
+U 1 1 612FC980
+P 4100 2650
+F 0 "U1" H 3500 3900 50  0000 C CNN
+F 1 "MCP23017_SP" H 3700 3750 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 4300 1650 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 4300 1550 50  0001 L CNN
+	1    4100 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_Expansion:MCP23017_SP U2
+U 1 1 612FD6F3
+P 9250 2600
+F 0 "U2" H 8650 3800 50  0000 C CNN
+F 1 "MCP23017_SP" H 8850 3700 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 9450 1600 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 9450 1500 50  0001 L CNN
+	1    9250 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 612FF5D1
+P 9250 3850
+F 0 "#PWR0101" H 9250 3600 50  0001 C CNN
+F 1 "GND" H 9255 3677 50  0000 C CNN
+F 2 "" H 9250 3850 50  0001 C CNN
+F 3 "" H 9250 3850 50  0001 C CNN
+	1    9250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 613007A6
+P 4100 3900
+F 0 "#PWR0102" H 4100 3650 50  0001 C CNN
+F 1 "GND" H 4105 3727 50  0000 C CNN
+F 2 "" H 4100 3900 50  0001 C CNN
+F 3 "" H 4100 3900 50  0001 C CNN
+	1    4100 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3750 4100 3800
+Wire Wire Line
+	9250 3700 9250 3850
+Wire Wire Line
+	3400 3250 3400 3350
+Wire Wire Line
+	3400 3350 3400 3450
+Connection ~ 3400 3350
+Wire Wire Line
+	3400 3450 3400 3800
+Wire Wire Line
+	3400 3800 4100 3800
+Connection ~ 3400 3450
+Connection ~ 4100 3800
+Wire Wire Line
+	4100 3800 4100 3900
+$Comp
+L power:+5V #PWR0103
+U 1 1 61303E8C
+P 4100 1250
+F 0 "#PWR0103" H 4100 1100 50  0001 C CNN
+F 1 "+5V" H 4115 1423 50  0000 C CNN
+F 2 "" H 4100 1250 50  0001 C CNN
+F 3 "" H 4100 1250 50  0001 C CNN
+	1    4100 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 61304DD7
+P 9250 1250
+F 0 "#PWR0104" H 9250 1100 50  0001 C CNN
+F 1 "+5V" H 9265 1423 50  0000 C CNN
+F 2 "" H 9250 1250 50  0001 C CNN
+F 3 "" H 9250 1250 50  0001 C CNN
+	1    9250 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 1250 9250 1500
+Wire Wire Line
+	4100 1250 4100 1550
+$Comp
+L power:+5V #PWR0105
+U 1 1 613108D3
+P 1700 1000
+F 0 "#PWR0105" H 1700 850 50  0001 C CNN
+F 1 "+5V" H 1715 1173 50  0000 C CNN
+F 2 "" H 1700 1000 50  0001 C CNN
+F 3 "" H 1700 1000 50  0001 C CNN
+	1    1700 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 61310FEF
+P 1700 1500
+F 0 "#PWR0106" H 1700 1250 50  0001 C CNN
+F 1 "GND" H 1705 1327 50  0000 C CNN
+F 2 "" H 1700 1500 50  0001 C CNN
+F 3 "" H 1700 1500 50  0001 C CNN
+	1    1700 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 613116F7
+P 1550 1250
+F 0 "C1" H 1250 1300 50  0000 L CNN
+F 1 "100nF" H 1250 1200 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 1588 1100 50  0001 C CNN
+F 3 "https://www.conrad.fr/p/condensateur-100-nf-50-vdc-pas-de-508-mm-10-pcs-172201" H 1550 1250 50  0001 C CNN
+	1    1550 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 613120F1
+P 1850 1250
+F 0 "C2" H 1965 1296 50  0000 L CNN
+F 1 "100nF" H 1965 1205 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 1888 1100 50  0001 C CNN
+F 3 "https://www.conrad.fr/p/condensateur-100-nf-50-vdc-pas-de-508-mm-10-pcs-172201" H 1850 1250 50  0001 C CNN
+	1    1850 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1100 1700 1100
+Wire Wire Line
+	1550 1400 1700 1400
+Wire Wire Line
+	1700 1000 1700 1100
+Connection ~ 1700 1100
+Wire Wire Line
+	1700 1100 1550 1100
+Wire Wire Line
+	1700 1500 1700 1400
+Connection ~ 1700 1400
+Wire Wire Line
+	1700 1400 1850 1400
+Wire Wire Line
+	8550 3200 8550 3250
+Connection ~ 9250 3700
+Wire Wire Line
+	8550 3250 8400 3250
+Wire Wire Line
+	8400 3250 8400 3700
+Wire Wire Line
+	8400 3700 9250 3700
+Connection ~ 8550 3250
+Wire Wire Line
+	8550 3250 8550 3300
+$Comp
+L power:+5V #PWR0107
+U 1 1 6131BAC6
+P 8500 3100
+F 0 "#PWR0107" H 8500 2950 50  0001 C CNN
+F 1 "+5V" H 8515 3273 50  0000 C CNN
+F 2 "" H 8500 3100 50  0001 C CNN
+F 3 "" H 8500 3100 50  0001 C CNN
+	1    8500 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3100 8500 3400
+Wire Wire Line
+	8500 3400 8550 3400
+$Comp
+L Device:C C3
+U 1 1 6132552D
+P 1700 3000
+F 0 "C3" H 1815 3046 50  0000 L CNN
+F 1 "100nf" H 1815 2955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 1738 2850 50  0001 C CNN
+F 3 "https://www.conrad.fr/p/condensateur-100-nf-50-vdc-pas-de-508-mm-10-pcs-172201" H 1700 3000 50  0001 C CNN
+	1    1700 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 61325BD4
+P 1700 2600
+F 0 "R1" H 1770 2646 50  0000 L CNN
+F 1 "10k" H 1770 2555 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1630 2600 50  0001 C CNN
+F 3 "~" H 1700 2600 50  0001 C CNN
+	1    1700 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 613281F6
+P 1700 3250
+F 0 "#PWR0108" H 1700 3000 50  0001 C CNN
+F 1 "GND" H 1705 3077 50  0000 C CNN
+F 2 "" H 1700 3250 50  0001 C CNN
+F 3 "" H 1700 3250 50  0001 C CNN
+	1    1700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0109
+U 1 1 613288C9
+P 1700 2350
+F 0 "#PWR0109" H 1700 2200 50  0001 C CNN
+F 1 "+5V" H 1715 2523 50  0000 C CNN
+F 2 "" H 1700 2350 50  0001 C CNN
+F 3 "" H 1700 2350 50  0001 C CNN
+	1    1700 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2350 1700 2450
+Wire Wire Line
+	1700 3150 1700 3250
+Wire Wire Line
+	8550 1800 8350 1800
+Wire Wire Line
+	8550 1900 8350 1900
+Text Label 8350 1800 0    50   ~ 0
+SDA
+Text Label 8350 1900 0    50   ~ 0
+SCK
+Wire Wire Line
+	3400 1850 3200 1850
+Wire Wire Line
+	3400 1950 3200 1950
+Text Label 3200 1850 0    50   ~ 0
+SDA
+Text Label 3200 1950 0    50   ~ 0
+SCK
+Wire Wire Line
+	1700 2750 1700 2800
+Wire Wire Line
+	3400 2750 3200 2750
+Wire Wire Line
+	8550 2700 8350 2700
+Text Label 8350 2700 0    50   ~ 0
+RST
+Text Label 3200 2750 0    50   ~ 0
+RST
+Wire Wire Line
+	1700 2800 2050 2800
+Connection ~ 1700 2800
+Wire Wire Line
+	1700 2800 1700 2850
+Text Label 1900 2800 0    50   ~ 0
+RST
+NoConn ~ 3400 2450
+NoConn ~ 3400 2550
+NoConn ~ 8550 2400
+NoConn ~ 8550 2500
+Wire Wire Line
+	4800 2750 5050 2750
+Wire Wire Line
+	4800 2850 5050 2850
+Wire Wire Line
+	4800 2950 5050 2950
+Wire Wire Line
+	4800 3050 5050 3050
+Wire Wire Line
+	4800 3150 5050 3150
+Wire Wire Line
+	4800 3250 5050 3250
+Wire Wire Line
+	4800 3350 5050 3350
+Wire Wire Line
+	4800 3450 5050 3450
+Wire Wire Line
+	4800 1850 5050 1850
+Wire Wire Line
+	4800 1950 5050 1950
+Wire Wire Line
+	4800 2050 5050 2050
+Wire Wire Line
+	4800 2150 5050 2150
+Wire Wire Line
+	4800 2250 5050 2250
+Wire Wire Line
+	4800 2350 5050 2350
+Wire Wire Line
+	4800 2450 5050 2450
+Wire Wire Line
+	4800 2550 5050 2550
+Text Label 5050 1850 0    50   ~ 0
+M_U0
+Text Label 5050 1950 0    50   ~ 0
+M_U1
+Text Label 5050 2050 0    50   ~ 0
+M_U2
+Text Label 5050 2150 0    50   ~ 0
+M_U3
+Wire Wire Line
+	9950 1800 10200 1800
+Wire Wire Line
+	9950 1900 10200 1900
+Wire Wire Line
+	9950 2000 10200 2000
+Wire Wire Line
+	9950 2100 10200 2100
+Wire Wire Line
+	9950 2200 10200 2200
+Wire Wire Line
+	9950 2300 10200 2300
+Wire Wire Line
+	9950 2400 10200 2400
+Wire Wire Line
+	9950 2500 10200 2500
+Wire Wire Line
+	9950 2700 10200 2700
+Wire Wire Line
+	9950 2800 10200 2800
+Wire Wire Line
+	9950 2900 10200 2900
+Wire Wire Line
+	9950 3000 10200 3000
+Wire Wire Line
+	9950 3100 10200 3100
+Wire Wire Line
+	9950 3200 10200 3200
+Wire Wire Line
+	9950 3300 10200 3300
+Wire Wire Line
+	9950 3400 10200 3400
+$Comp
+L MCU_Microchip_PIC18:PIC18F4420-xP U3
+U 1 1 613826F0
+P 6800 2900
+F 0 "U3" H 6150 4250 50  0000 C CNN
+F 1 "PIC18F4420-xP" H 6400 4150 50  0000 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm" H 6800 1500 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/39631E.pdf" H 6800 3000 50  0001 C CNN
+	1    6800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 613899C5
+P 6800 4350
+F 0 "#PWR0110" H 6800 4100 50  0001 C CNN
+F 1 "GND" H 6805 4177 50  0000 C CNN
+F 2 "" H 6800 4350 50  0001 C CNN
+F 3 "" H 6800 4350 50  0001 C CNN
+	1    6800 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4200 6800 4350
+$Comp
+L power:+5V #PWR0111
+U 1 1 6138BA7E
+P 6800 1250
+F 0 "#PWR0111" H 6800 1100 50  0001 C CNN
+F 1 "+5V" H 6815 1423 50  0000 C CNN
+F 2 "" H 6800 1250 50  0001 C CNN
+F 3 "" H 6800 1250 50  0001 C CNN
+	1    6800 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2300 5950 2300
+Wire Wire Line
+	6200 2400 5950 2400
+Wire Wire Line
+	6200 2500 5950 2500
+Wire Wire Line
+	6200 2600 5950 2600
+Wire Wire Line
+	6200 2700 5950 2700
+Wire Wire Line
+	6200 2800 5950 2800
+Wire Wire Line
+	6200 2900 5950 2900
+Wire Wire Line
+	6200 3000 5950 3000
+Wire Wire Line
+	6200 3200 5950 3200
+Wire Wire Line
+	6200 3300 5950 3300
+Wire Wire Line
+	6200 3400 5950 3400
+Wire Wire Line
+	6200 3500 5950 3500
+Wire Wire Line
+	6200 3600 5950 3600
+Wire Wire Line
+	6200 3700 5950 3700
+Wire Wire Line
+	6200 3800 5950 3800
+Wire Wire Line
+	6200 3900 5950 3900
+Wire Wire Line
+	7400 2300 7700 2300
+Wire Wire Line
+	7400 2400 7700 2400
+Wire Wire Line
+	7400 2500 7700 2500
+Wire Wire Line
+	7400 2600 7700 2600
+Wire Wire Line
+	7400 2700 7700 2700
+Wire Wire Line
+	7400 3900 7700 3900
+Wire Wire Line
+	7400 3800 7700 3800
+Wire Wire Line
+	7400 3700 7700 3700
+Wire Wire Line
+	7400 3600 7700 3600
+Wire Wire Line
+	7400 3500 7700 3500
+Wire Wire Line
+	7400 3400 7700 3400
+Wire Wire Line
+	7400 3300 7700 3300
+Wire Wire Line
+	7400 3200 7700 3200
+Wire Wire Line
+	7400 3000 7700 3000
+Wire Wire Line
+	7400 2900 7700 2900
+Wire Wire Line
+	7400 2800 7700 2800
+Text Label 7700 3200 0    50   ~ 0
+S_U0
+Text Label 7700 3300 0    50   ~ 0
+S_U1
+Text Label 7700 3400 0    50   ~ 0
+S_U2
+Text Label 7700 3500 0    50   ~ 0
+S_U3
+Text Label 7700 3600 0    50   ~ 0
+S_D0
+Text Label 7700 3700 0    50   ~ 0
+S_D1
+Text Label 7700 3800 0    50   ~ 0
+S_D2
+Text Label 5950 2300 0    50   ~ 0
+M_U0
+Text Label 5950 2400 0    50   ~ 0
+M_U1
+Text Label 5950 2500 0    50   ~ 0
+M_U2
+Text Label 5950 2600 0    50   ~ 0
+M_U3
+Text Label 7700 2300 0    50   ~ 0
+M_D0
+Text Label 7700 2400 0    50   ~ 0
+M_D1
+Text Label 7700 2500 0    50   ~ 0
+M_D2
+Text Label 5950 3200 0    50   ~ 0
+H_U0
+Text Label 5950 3300 0    50   ~ 0
+H_U1
+Text Label 5950 3400 0    50   ~ 0
+H_U2
+Text Label 5950 3500 0    50   ~ 0
+H_U3
+Text Label 5950 3800 0    50   ~ 0
+H_D0
+Text Label 5950 3700 0    50   ~ 0
+H_D1
+Text Label 5950 3600 0    50   ~ 0
+H_D2
+Text Label 7700 2800 0    50   ~ 0
+LA1
+Text Label 7700 3900 0    50   ~ 0
+LA2
+NoConn ~ 6200 2100
+NoConn ~ 6200 2000
+NoConn ~ 6200 1900
+Text Label 5950 2800 0    50   ~ 0
+LED
+Text Label 7700 2600 0    50   ~ 0
+JP1
+Text Label 7700 2700 0    50   ~ 0
+S1
+NoConn ~ 6200 1800
+NoConn ~ 5950 3900
+NoConn ~ 5950 2700
+NoConn ~ 5950 2900
+NoConn ~ 5950 3000
+NoConn ~ 7700 2900
+NoConn ~ 7700 3000
+$Comp
+L Device:R R3
+U 1 1 6145A5D8
+P 1850 4350
+F 0 "R3" H 1920 4396 50  0000 L CNN
+F 1 "10k" H 1920 4305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1780 4350 50  0001 C CNN
+F 3 "~" H 1850 4350 50  0001 C CNN
+	1    1850 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6145AF26
+P 1550 4350
+F 0 "R2" H 1620 4396 50  0000 L CNN
+F 1 "10k" H 1620 4305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1480 4350 50  0001 C CNN
+F 3 "~" H 1550 4350 50  0001 C CNN
+	1    1550 4350
+	1    0    0    -1  
+$EndComp
+Text Label 1950 4750 0    50   ~ 0
+SDA
+Text Label 1950 4850 0    50   ~ 0
+SCK
+Wire Wire Line
+	1850 4750 2150 4750
+Wire Wire Line
+	1850 4500 1850 4750
+Wire Wire Line
+	1550 4850 2150 4850
+Wire Wire Line
+	1550 4500 1550 4850
+$Comp
+L power:GND #PWR0112
+U 1 1 61485CE7
+P 1700 5100
+F 0 "#PWR0112" H 1700 4850 50  0001 C CNN
+F 1 "GND" H 1705 4927 50  0000 C CNN
+F 2 "" H 1700 5100 50  0001 C CNN
+F 3 "" H 1700 5100 50  0001 C CNN
+	1    1700 5100
+	1    0    0    -1  
+$EndComp
+Text Label 5050 2250 0    50   ~ 0
+M_D0
+Text Label 5050 2350 0    50   ~ 0
+M_D1
+Text Label 5050 2450 0    50   ~ 0
+M_D2
+Text Label 10200 2700 0    50   ~ 0
+H_U0
+Text Label 10200 2800 0    50   ~ 0
+H_U1
+Text Label 10200 2900 0    50   ~ 0
+H_U2
+Text Label 10200 3100 0    50   ~ 0
+H_D0
+Text Label 10200 3000 0    50   ~ 0
+H_U3
+Text Label 5050 2550 0    50   ~ 0
+LA1
+Text Label 5050 2750 0    50   ~ 0
+S_U0
+Text Label 5050 2850 0    50   ~ 0
+S_U1
+Text Label 5050 2950 0    50   ~ 0
+S_U2
+Text Label 5050 3050 0    50   ~ 0
+S_U3
+Text Label 5050 3150 0    50   ~ 0
+S_D0
+Text Label 5050 3250 0    50   ~ 0
+S_D1
+Text Label 5050 3350 0    50   ~ 0
+S_D2
+Text Label 10200 3400 0    50   ~ 0
+LED
+Text Label 10200 3200 0    50   ~ 0
+H_D1
+Text Label 10200 3300 0    50   ~ 0
+H_D2
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 61459EBF
+P 2350 4750
+F 0 "J1" H 2430 4742 50  0000 L CNN
+F 1 "Conn_01x04" H 2430 4651 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 2350 4750 50  0001 C CNN
+F 3 "~" H 2350 4750 50  0001 C CNN
+	1    2350 4750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10200 1800
+NoConn ~ 10200 1900
+NoConn ~ 10200 2000
+NoConn ~ 10200 2100
+NoConn ~ 10200 2200
+NoConn ~ 10200 2300
+NoConn ~ 10200 2400
+NoConn ~ 10200 2500
+$Comp
+L power:+3.3V #PWR0113
+U 1 1 6136C340
+P 1700 4100
+F 0 "#PWR0113" H 1700 3950 50  0001 C CNN
+F 1 "+3.3V" H 1715 4273 50  0000 C CNN
+F 2 "" H 1700 4100 50  0001 C CNN
+F 3 "" H 1700 4100 50  0001 C CNN
+	1    1700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 4200 2150 4200
+Connection ~ 1850 4200
+Wire Wire Line
+	2150 4200 2150 4650
+$Comp
+L Device:C C4
+U 1 1 613A679A
+P 1150 4600
+F 0 "C4" H 1265 4646 50  0000 L CNN
+F 1 "100nf" H 1265 4555 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 1188 4450 50  0001 C CNN
+F 3 "https://www.conrad.fr/p/condensateur-100-nf-50-vdc-pas-de-508-mm-10-pcs-172201" H 1150 4600 50  0001 C CNN
+	1    1150 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 4200 1700 4200
+NoConn ~ 7700 2600
+NoConn ~ 7700 2700
+Wire Wire Line
+	6800 1250 6800 1600
+Wire Wire Line
+	1700 4100 1700 4200
+Connection ~ 1700 4200
+Wire Wire Line
+	1700 4200 1850 4200
+Wire Wire Line
+	1700 5100 1700 4950
+Wire Wire Line
+	1700 4950 2150 4950
+Wire Wire Line
+	1550 4200 1150 4200
+Connection ~ 1550 4200
+Wire Wire Line
+	1150 4200 1150 4450
+Wire Wire Line
+	1700 4950 1150 4950
+Connection ~ 1700 4950
+Wire Wire Line
+	1150 4750 1150 4950
+Text Label 5050 3450 0    50   ~ 0
+LA2
+Text Notes 10550 3300 0    50   ~ 0
+1 affiché
+Text Notes 10550 3200 0    50   ~ 0
+2 affiché
+Text Notes 10550 3100 0    50   ~ 0
+0 affiché\n
+$EndSCHEMATC
