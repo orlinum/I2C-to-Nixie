@@ -27,6 +27,7 @@ The initial goal of my project is to use a Raspberry PI to get the time in NTP a
 
 Very simple, use two MCP23017 and 16-Bit I2C I/O Expander to convert I2C signal to replace microcontroller.
 Two MCP23017 is used to transmit hours, minutes, seconds, one led, and two "LA" neon lamp.
+
 Chip U1 channel "B" transmit Minutes Unit (M_Ux) and Minutes Tens (M_Dx). LA1 is connected to the last "B" pin.
 Chip U1 channel "A" transmit Seconds Unit (S_Ux) and Seconds Tens (S_Dx). LA2 is connected to the last "A" pin.
 Chip U2 channel "A" transmit Hours Unit (H_Ux) and Hours Tens (H_Dx). LED is connected to the last "A" pin.
@@ -39,11 +40,11 @@ R1 and C3 are used to reset two MCP23017 on startup. C1, C2, and C4 are decoupli
 ![Schema2](./Picture/3.png)
 
 ## Component list
-C1, C2, C3, C4 : 100nf
-R1, R2, R3 : 10kohms
-U1, U2 : MCP23017-E/SP 
-U3 : Model connector of PIC18F4420 (do not buy a PIC)
-J1 : Connector 01x04
+* C1, C2, C3, C4 : 100nf
+* R1, R2, R3 : 10kohms
+* U1, U2 : MCP23017-E/SP 
+* U3 : Model connector of PIC18F4420 (do not buy a PIC)
+* J1 : Connector 01x04
 
 ## Software
 Yes ! A python software for raspberry pi is writing ... Please be patient. 
