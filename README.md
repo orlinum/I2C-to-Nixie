@@ -2,7 +2,7 @@
 Raspberry Pi Adapter card for Elektor Nixie Clock
 
 ![card](./Picture/1.jpg)
-Mounted component card
+Replaces the Microchip PIC18F4420 microcontroller
 
 ![card2](./Picture/2.jpg)
 Clock working with Raspberry PI
@@ -13,8 +13,8 @@ I2C-to-Nixie is a daughter card which replaces the Microchip PIC18F4420 microcon
 Input of this card is an I2C interface allowing using this board with a Raspberry Pi, an Arduino, or any other equipment able to use the I2C interface.
 
 ![card0](./Picture/0.jpg)
-Replaces the Microchip PIC18F4420 microcontroller 
-
+Mounted component card
+ 
 More information about Elektor Nixie Clock is available here : 
 https://www.elektormagazine.com/magazine/elektor-201605/28960
 
