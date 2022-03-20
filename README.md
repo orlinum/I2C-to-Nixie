@@ -38,6 +38,7 @@ Button and jumpers on mothercard are not connected.
 R1 and C3 are used to reset two MCP23017 on startup. C1, C2, and C4 are decoupling capacitors. R2 and R3 are pullup resistors, for I2C bus.
 
 ![Schema2](./Picture/3.png)
+
 This board was produced with the Kicad software. 
 
 ## Component list
