@@ -38,6 +38,7 @@ Button and jumpers on mothercard are not connected.
 R1 and C3 are used to reset two MCP23017 on startup. C1, C2, and C4 are decoupling capacitors. R2 and R3 are pullup resistors, for I2C bus.
 
 ![Schema2](./Picture/3.png)
+This board was produced with the Kicad software. 
 
 ## Component list
 * C1, C2, C3, C4 : 100nf
@@ -46,7 +47,7 @@ R1 and C3 are used to reset two MCP23017 on startup. C1, C2, and C4 are decoupli
 * U3 : Model connector of PIC18F4420 (do not buy a PIC)
 * J1 : Connector 01x04
 
-## Software
+## Software for Raspbery PI
 Yes ! A python software for raspberry pi is writing ... Please be patient. 
 
 ## Licence
