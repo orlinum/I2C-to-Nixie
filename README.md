@@ -43,3 +43,14 @@ J1 : Connector 01x04
 
 Creative Commons Zero v1.0 Universal (cc0-1.0)
 
+
+## Anothers pictures
+
+
+![card0](./Picture/0.jpg)
+Mounted component card
+
+
+![card2](./Picture/2.jpg)
+Clock working with Raspberry PI
+
